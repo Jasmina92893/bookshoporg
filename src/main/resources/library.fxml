@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.library.LibraryController" spacing="10" alignment="TOP_CENTER">
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.library.LibraryController">
     <children>
-        <Label text="Library Management System" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
-        <HBox spacing="10" alignment="CENTER">
+        <HBox spacing="10">
             <TextField fx:id="bookIdField" promptText="Book ID" />
             <TextField fx:id="bookNameField" promptText="Book Name" />
             <TextField fx:id="bookAuthorField" promptText="Author" />
             <TextField fx:id="bookCategoryField" promptText="Category" />
             <TextField fx:id="bookPriceField" promptText="Price" />
-        </HBox>
-        <HBox spacing="10" alignment="CENTER">
             <Button text="Add Book" onAction="#addBook" />
             <Button text="Delete Book" onAction="#deleteBook" />
         </HBox>
-        <TableView fx:id="bookTable" prefHeight="300" prefWidth="600">
+        <TableView fx:id="bookTable">
             <columns>
-                <TableColumn fx:id="columnId" text="ID" prefWidth="100" />
-                <TableColumn fx:id="columnName" text="Name" prefWidth="150" />
-                <TableColumn fx:id="columnAuthor" text="Author" prefWidth="150" />
-                <TableColumn fx:id="columnCategory" text="Category" prefWidth="100" />
-                <TableColumn fx:id="columnPrice" text="Price" prefWidth="100" />
+                <TableColumn fx:id="columnId" text="ID" />
+                <TableColumn fx:id="columnName" text="Name" />
+                <TableColumn fx:id="columnAuthor" text="Author" />
+                <TableColumn fx:id="columnCategory" text="Category" />
+                <TableColumn fx:id="columnPrice" text="Price" />
             </columns>
         </TableView>
-        <TextArea fx:id="resultArea" prefHeight="100" prefWidth="600" editable="false" />
+        <TextArea fx:id="resultArea" prefHeight="100" />
     </children>
 </VBox>

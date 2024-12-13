@@ -39,7 +39,6 @@ public class LibraryController {
 
         loadBooks();
     }
-
     public void addBook() {
         String sql = "INSERT INTO Book (Book_ID, Book_Name, Book_Author, Book_Category, Book_Price) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
